@@ -1,8 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 
-r = requests.get('Sent')
-soup = BeautifulSoup(r.text, 'lxml')
+#r = requests.get('Sent')
+#soup = BeautifulSoup(r.text, 'lxml')
 
 contenido = '''From - Fri Aug 18 06:25:23 2017
 X-Mozilla-Status: 0001
@@ -365,3 +365,7 @@ style="width:320px;height:4px;border-width:0px;background-color:rgb(253,120,50);
 '''
 
 sopa = BeautifulSoup(contenido, 'lxml')
+
+division = sopa.find_all('div', {'dir': 'ltr'})
+for i in division:
+    print(i.text)
