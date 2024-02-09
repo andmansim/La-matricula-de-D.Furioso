@@ -369,10 +369,10 @@ sopa = BeautifulSoup(contenido, 'lxml')
 divisiones = sopa.find_all('div', {'dir': 'ltr'})
 for division in divisiones:
     texto = division.text
-    if 'matrícula' in texto.lower():  # Convertir a minúsculas para buscar de manera insensible a mayúsculas y minúsculas
+    if 'matricula' in texto.lower():  # Convertir a minúsculas para buscar de manera insensible a mayúsculas y minúsculas
         # Dividir el texto en líneas para buscar la línea que contiene la matrícula
         lineas = texto.split('\n')
         for linea in lineas:
-            if 'matrícula' in linea.lower():
+            if 'matricula' in linea.lower():
                 # Si encuentras la línea que contiene 'matrícula', imprime esa línea
                 print(linea)
