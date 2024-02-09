@@ -11,4 +11,4 @@ Marca: SUSUKI
 
 Modelo:S5617
 
-Hoy he tenido un percance a la salida de la calle 133, he sufrido una amnesia por una brusca caída y no recuerdo en que planta de su garaje he dejado mi automóvil.
+El señor Furioso ha teneido un accidente a la salida de la calle 133, sufriendo una amnesia por la caída brusca y no recuerda en que planta de su garaje ha dejado su automóvil.
