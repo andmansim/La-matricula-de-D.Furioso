@@ -366,13 +366,27 @@ style="width:320px;height:4px;border-width:0px;background-color:rgb(253,120,50);
 
 sopa = BeautifulSoup(contenido, 'lxml')
 
-divisiones = sopa.find_all('div', {'dir': 'ltr'})
-for division in divisiones:
-    texto = division.text
-    if 'matricula' in texto.lower():  # Convertir a minúsculas para buscar de manera insensible a mayúsculas y minúsculas
-        # Dividir el texto en líneas para buscar la línea que contiene la matrícula
-        lineas = texto.split('\n')
-        for linea in lineas:
-            if 'matricula' in linea.lower():
-                # Si encuentras la línea que contiene 'matrícula', imprime esa línea
-                print(linea)
+def buscar (palabra):
+    divisiones = sopa.find_all('div', {'dir': 'ltr'})
+    for division in divisiones:
+        texto = division.text
+        if palabra in texto.lower():  # Convertir a minúsculas para buscar de manera insensible a mayúsculas y minúsculas
+            # Dividir el texto en líneas para buscar la línea que contiene la matrícula
+            lineas = texto.split('\n')
+            for linea in lineas:
+                if palabra in linea.lower():
+                    # Si encuentras la línea que contiene 'matrícula', imprime esa línea
+                    print(linea)
+                    
+    return
+buscar('matricula')
+print('\n')
+buscar('fecha de matriculación')
+print('\n')
+buscar('color')
+print('\n')
+buscar('marca')
+print('\n')
+buscar('modelo')
+print ('\n')
+buscar('caida')
